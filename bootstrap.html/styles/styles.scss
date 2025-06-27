@@ -1,0 +1,152 @@
+$main-Color1:#edece8;
+$main-Color2:#5f5e5d;
+
+@mixin responsive {
+  @media (max-width: 800px) { @content } 
+}
+
+
+body{
+    background-color:$main-Color1;
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.grid-contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include responsive(){
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+.contenedor_1{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: left;
+    align-items:center;
+    padding: 20px;
+
+        h1{
+            font-size: 40px;
+            color:$main-Color2;
+            font-weight: bold;
+        }
+
+        img{
+            width: 110px;
+            opacity: .8;
+        }     
+        
+         
+}
+
+.contenedor_2{
+    padding: 0px 100px 0px 0px;
+    gap: 20px;
+}
+
+
+
+main {
+
+  .titulo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+      .linea{
+        flex: 1;
+        height: 0px;
+        border-top: 3px double #5f5e5d;
+        margin-right: 40px;
+      }
+    }
+
+  h1 {
+    color: $main-Color2;
+    text-decoration: none;
+    text-align: left;
+    font-size: 25px;
+    padding: 5px 15px 5px 15px;
+    font-weight: bold;
+    transition: .4s;
+    
+  }
+
+  p {
+    color: #625548;
+    text-decoration: none;
+    text-align: justify;
+    font-size: 18px;
+    padding: 5px 35px 5px 35px;
+    font-weight: normal;
+    transition: .4s;
+  }
+
+  .card-title,
+  .card-text {
+    color: $main-Color2;
+  }
+
+  .accordion-button,
+  .accordion-body {
+    background-color: $main-Color1;
+    color: $main-Color2;
+  }
+
+
+}
+
+.navbar,
+.bg-body-tertiary,
+.navbar-collapse,
+.navbar-nav {
+  background-color: $main-Color1 !important;
+}
+.navbar-brand,
+.nav-link,
+.navbar-toggler {
+  color: $main-Color2 !important;
+}
+
+.navbar-toggler-icon {
+  filter: invert(40%); // mejora visibilidad con fondo claro
+}
+
+.btn-outline-success {
+  border-color: $main-Color2;
+  color: $main-Color2;
+
+  &:hover {
+    background-color: $main-Color2;
+    color: $main-Color1;
+  }
+}
+
+.my-5 {
+  background-color: $main-Color1;
+
+  h5, p {
+    color: $main-Color2;
+  }
+
+  .btn {
+    background-color: $main-Color2;
+    color: $main-Color1;
+    border: #5f5e5d;
+
+    &:hover {
+      background-color: darken($main-Color2, 10%);
+      color: $main-Color1;
+    }
+  }
+}
